@@ -1,0 +1,74 @@
+@charset "UTF-8";
+@font-face {
+    font-family: 'principal';
+    src: url(Play/Play-Bold.ttf) format(truetype);
+}
+
+h2 {
+    text-align: center;
+    font-family: 'principal','sans-serif';
+}
+footer p {
+    font-family: 'Times New Roman', Times, serif;
+    color: grey;
+    text-align: center;
+    background-image: linear-gradient(65deg, purple, black);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+/*tela de resultado*/
+#resultado {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.521);
+    font-size: 31px;
+    padding-left: 10px;
+    color: black;
+    height: 39px;
+    background-color: white;
+    border-radius: 10px;
+    margin: 10px 8px;
+    }
+.plano_fundo{
+    background-image: linear-gradient(96deg, purple, black);
+    height: 100vh;
+    }
+.calculadora {
+    background-color: rgba(15, 14, 15, 0.644);
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 12px;
+    padding: 11px;
+    box-shadow: -8px -14px 20px 0px rgba(255, 255, 255, 0.014);
+}
+.botao{
+    font-size: 20px;
+    font-weight: bolder;
+    background-color: rgb(43, 43, 43);
+    color: white;
+    margin: 4px;
+    width: 65px;
+    height: 50px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.botao:hover {
+    background-color: rgb(71, 71, 71);
+}
+.botao:active {
+    text-shadow: 0 0 5px white;
+    
+}
+.botao_g_0 {
+    width: 140px;
+}
+.botao_g_calcul {
+    height: 110px;
+}

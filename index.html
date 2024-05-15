@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calculadora</title>
+    <link rel="shortcut icon" href="favicon/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div class="plano_fundo">
+        <div class="calculadora">
+            <h2>calculadora</h2>
+            <p id="resultado"></p>
+            <table>
+                <tr>
+                    <td><button class="botao" onclick="insert('-')">-</button></td>
+                    <td><button class="botao" onclick="insert('+')">+</button></td>
+                    <td><button class="botao" onclick="insert('/')">/</button></td>
+                    <td><button class="botao" onclick="insert('*')">X</button></td>
+                </tr>
+                <tr>
+                    <td><button class="botao" onclick="insert('1')">1</button></td>
+                    <td><button class="botao" onclick="insert('2')">2</button></td>
+                    <td><button class="botao" onclick="insert('3')">3</button></td>
+                    <td><button class="botao" onclick="back()">⭠</button></td>
+                </tr>
+                <tr>
+                    <td><button class="botao" onclick="insert('4')">4</button></td>
+                    <td><button class="botao" onclick="insert('5')">5</button></td>
+                    <td><button class="botao" onclick="insert('6')">6</button></td>
+                    <!--botão de limpar-->
+                    <td><button class="botao" onclick="clean()">C</button></td>
+                </tr>
+                <tr>
+                    <td><button class="botao" onclick="insert('7')">7</button></td>
+                    <td><button class="botao" onclick="insert('8')">8</button></td>
+                    <td><button class="botao" onclick="insert('9')">9</button></td>
+                    <!--botão grande '='-->
+                    <td rowspan="2"><button class="botao botao_g_calcul" onclick="calcular()">=</button></td>
+                </tr>
+                <tr>
+                    <!--botão grande '0'-->
+                    <td colspan="2"><button class="botao botao_g_0" onclick="insert('0')">0</button></td>
+                    <td><button class="botao" onclick="insert(',')">.</button></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+<footer>
+    <p>Criado por Maycon Ryan</p>
+</footer>
+</body>
+<script>
+    function insert(num) 
+        {
+        var numero = document.getElementById('resultado').innerHTML
+        document.getElementById('resultado').innerHTML = numero + num; //<função para dois números permanecerem na tela.
+        }
+     //botão de limpar a tela de calculo 'c'.
+        function clean()
+        {
+        document.getElementById('resultado').innerHTML = "";
+        }  
+    
+    
+    //botão de calcular '='
+        function calcular()
+        {
+        var resultado = document.getElementById('resultado').innerHTML;
+         if (resultado)
+        {
+            document.getElementById('resultado').innerHTML = eval(resultado);
+        }
+         else 
+        {
+            //nesse "" daria para por qualquer texto, mas por conta de estética deixei vazio.
+            document.getElementById('resultado').innerHTML = ""; 
+        }
+        }
+    
+    //botão de apagar 1 por vez.
+        function back()
+        {
+        var resultado = document.getElementById('resultado').innerHTML;
+        document.getElementById('resultado').innerHTML = resultado.substring(0, resultado.length -1);
+        }
+</script>
+</html>
