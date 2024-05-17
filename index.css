@@ -1,7 +1,7 @@
 @charset "UTF-8";
 @font-face {
     font-family: 'principal';
-    src: url(Play/Play-Bold.ttf) format(truetype);
+    src: url(fonte/fonte-Play/Play-Regular.ttf) format(truetype);
 }
 
 h2 {
