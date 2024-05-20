@@ -5,14 +5,26 @@
 }
 
 h2 {
-    text-align: center;
     font-family: 'principal','sans-serif';
-}
-footer p {
-    font-family: 'Times New Roman', Times, serif;
-    color: grey;
     text-align: center;
-    background-image: linear-gradient(65deg, purple, black);
+}
+footer a {
+    font-family: 'principal', 'sarif';
+    font-weight: bold;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    display: block;
+    text-align: center;
+    background-image: linear-gradient(19deg, purple, black);
+    padding-bottom: 6px;
+}
+
+footer > a:hover {
+    text-decoration: underline;
+}
+footer > a:active {
+    text-decoration: underline;
+    text-shadow: 0 0 5px white;
 }
 
 *{
@@ -25,27 +37,27 @@ footer p {
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.521);
     font-size: 31px;
-    padding-left: 10px;
     color: black;
     height: 39px;
+    padding-left: 10px;
     background-color: white;
     border-radius: 10px;
     margin: 10px 8px;
     }
 .plano_fundo{
+    height: 96vh;
     background-image: linear-gradient(96deg, purple, black);
-    height: 100vh;
     }
 .calculadora {
-    background-color: rgba(15, 14, 15, 0.644);
     color: white;
     position: absolute;
+    background-color: rgba(15, 14, 15, 0.644);
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    border-radius: 12px;
     padding: 11px;
     box-shadow: -8px -14px 20px 0px rgba(255, 255, 255, 0.014);
+    border-radius: 12px;
 }
 .botao{
     font-size: 20px;
