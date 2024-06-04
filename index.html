@@ -52,36 +52,31 @@
 </footer>
 </body>
 <script>
-    function insert(num) 
-        {
+    function insert(num) {
         var numero = document.getElementById('resultado').innerHTML
         document.getElementById('resultado').innerHTML = numero + num; //<função para dois números permanecerem na tela.
         }
-     //botão de limpar a tela de calculo 'c'.
-        function clean()
-        {
+    
+        //botão de limpar a tela de calculo 'c'.
+    function clean() {
         document.getElementById('resultado').innerHTML = "";
         }  
     
     
     //botão de calcular '='
-        function calcular()
-        {
+    function calcular() {
         var resultado = document.getElementById('resultado').innerHTML;
-         if (resultado)
-        {
+         if (resultado) {
             document.getElementById('resultado').innerHTML = eval(resultado);
         }
-         else 
-        {
+         else {
             //nesse "" daria para por qualquer texto, mas por conta de estética deixei vazio.
             document.getElementById('resultado').innerHTML = ""; 
         }
         }
     
     //botão de apagar 1 por vez.
-        function back()
-        {
+    function back() {
         var resultado = document.getElementById('resultado').innerHTML;
         document.getElementById('resultado').innerHTML = resultado.substring(0, resultado.length -1);
         }
